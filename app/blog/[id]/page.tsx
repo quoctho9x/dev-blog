@@ -1,17 +1,15 @@
-// import { GetServerSideProps } from "next";
 import BlogHeader from "@/components/BlogHeader";
 import { getBlogDetail } from "@/server/blogs";
 import parse from 'html-react-parser';
 import detail from './id.module.css';
-// import Image from "next/image";
 
-export default async function BlogPost({ params }: { params: { slug: string, id:string } }) {
-  const blogDetail = await getBlogDetail(parseInt(params?.id));
-  console.log('blogDetail: ',blogDetail);
+export default function BlogPost({ params }: { params: { slug: string, id:string } }) {
+  // const blogDetail = await getBlogDetail(parseInt(params?.id));
+  // console.log('blogDetail: ',blogDetail);
   
   return (
     <section className="layout">
-      <div className=" max-w-[50%]">
+      {/* <div className=" max-w-[50%]">
         <h1 className=" text-center my-10 text-[2rem] font-bold">
           {blogDetail?.title}
         </h1>
@@ -21,7 +19,7 @@ export default async function BlogPost({ params }: { params: { slug: string, id:
           {parse(blogDetail?.bodyHTML)}
         </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

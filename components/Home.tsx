@@ -1,15 +1,19 @@
-import Home from "@/components/Home";
+/* eslint-disable @next/next/no-async-client-component */
+"use client";
+import { getBlogs } from "@/server/blogs";
+import ListBlog from "./ListBlog";
+import Filter from "@/components/Filter";
 
 export default async function Home() {
-  // const blogs = await getBlogs();
-  // let tags: string[] = [];
-  // for (const blog of blogs) {
-  //   for (const tag of blog.tags) {
-  //     if (!tags.includes(tag)) {
-  //       tags.push(tag);
-  //     }
-  //   }
-  // }
+  const blogs = await getBlogs();
+  let tags: string[] = [];
+  for (const blog of blogs) {
+    for (const tag of blog.tags) {
+      if (!tags.includes(tag)) {
+        tags.push(tag);
+      }
+    }
+  }
 
   return (
     <main className="w-screen h-screen overflow-auto flex flex-col items-center bg-zinc-800 text-neutral-300">
@@ -21,8 +25,8 @@ export default async function Home() {
             {" "}
             A full-stack blog made with next.js, tailwindCSS, Github GraphQL
           </p>
-          {/* <Filter tags={tags} /> */}
-          {/* <ListBlog blogs={blogs} /> */}
+          <Filter tags={tags} />
+          <ListBlog blogs={blogs} />
           {/* <p>{JSON.stringify(blogs)}</p> */}
         </div>
       </section>
