@@ -1,4 +1,6 @@
-import Home from "@/components/Home";
+import { getBlogs } from "@/server/blogs";
+import ListBlog from "../components/ListBlog";
+import Filter from "@/components/Filter";
 
 export default async function Home() {
   // const blogs = await getBlogs();
