@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-async-client-component */
+"use client";
 import { getBlogs } from "@/server/blogs";
 import ListBlog from "./ListBlog";
 import Filter from "@/components/Filter";
