@@ -5,7 +5,7 @@ import BlogHeader from "./BlogHeader";
 const BlogReview = (props:any) => {
   const blogData = props?.blog;
   const previewText: string = blogData?.bodyText?.substring(0, 150) + "...";
-  console.log("blogData: ", blogData);
+  // console.log("blogData: ", blogData);
 
   return (
     <section className="flex flex-col items-center text-[1.15rem] mt-1">

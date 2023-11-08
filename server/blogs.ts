@@ -16,7 +16,7 @@ export async function getBlogs() {
     })
     let res = await response.json();
     const discussions = res?.data?.repository?.discussions?.nodes;
-    const posts = discussions.map((discussion:any) => {
+    const posts = discussions?.map((discussion:any) => {
         const {
             title,
             author,
@@ -64,9 +64,6 @@ export async function getBlogDetail(blogId:number) {
     })
     let res = await response.json();
     let discussion = res.data.repository.discussion;
-    // const {
-    //     author
-    // }
     // console.log('response_discussion', discussion);
     return discussion;
 }
