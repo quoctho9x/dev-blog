@@ -47,7 +47,7 @@ export async function getBlogs() {
         }
         return post
     })
-    //  console.log('response', posts);
+    //  console.log('response_tra_vw', discussions, posts);
     return posts
 }
 
