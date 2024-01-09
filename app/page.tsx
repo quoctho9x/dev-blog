@@ -18,7 +18,7 @@ export default async function Home() {
       <title>Home page</title>
       <section>
         <div className="mt-3 text-center">
-          <h1 className="text-[3rem]">welcome to dev blog a</h1>
+          <h1 className="text-[3rem]">welcome to dev blog a (evn is dev)</h1>
           <p>
             {" "}
             A full-stack blog made with next.js, tailwindCSS, Github GraphQL
